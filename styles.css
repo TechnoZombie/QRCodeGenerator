@@ -1,6 +1,7 @@
 body {
-    background-color: #343a40; /* Dark gray */
+    background-color: #3b3a3a; /* Dark gray */
     color: #fff; /* White text */
+    padding: 20px;
 }
 
 #labelSize {
@@ -10,8 +11,11 @@ body {
 #app {
     max-width: 400px;
     margin: 0 auto;
-    width: 80%; /* Adjusted width */
+    background-color: #343a40;
     padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #inputGroup {
