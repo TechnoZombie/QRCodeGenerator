@@ -19,6 +19,7 @@ $(document).ready(function () {
         $("#sizeSelection").val('Default Size');
         $("#bgColorSelect").val('Background Color');
         $("#codeColorSelect").val('Code Color');
+        $("#formatSelect").val('Image Format');
         $('.generatedQRcode').empty();
     }
 
