@@ -1,15 +1,17 @@
-#QR Code Generator
-This is a simple QR code generator built using HTML, CSS, JavaScript, and jQuery. 
+# QR Code Generator
+
+This is a simple QR code generator built using HTML, CSS, JavaScript, and jQuery.
+
 It allows users to input a URL or text, select the size, background color, code color, and image format for their QR code. The generated QR code can be downloaded as an image.
 
-##Features
-Generate QR codes based on user input
-Customizable QR code size, background color, code color, and image format
-Download the generated QR code as an image
+**Features:**
+- Generate QR codes based on user input
+- Customizable QR code size, background color, code color, and image format
+- Download the generated QR code as an image
 
-LINK: https://technozombie.github.io/QRCodeGenerator
+**LINK:** [https://technozombie.github.io/QRCodeGenerator](https://technozombie.github.io/QRCodeGenerator)
 
-##Usage
+**Usage:**
 
 1. Enter a URL or text in the input field.
 
@@ -23,11 +25,11 @@ LINK: https://technozombie.github.io/QRCodeGenerator
 
 **NOTE:** Only the "URL or Text" field needs to be set. If all others are left as default, the code will still be generated, using default styling.
 
-###Built With
-HTML
-CSS
-JavaScript
-jQuery
+**Built With:**
+- HTML
+- CSS
+- JavaScript
+- jQuery
 
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+**License:**
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
