@@ -26,10 +26,9 @@ $(document).ready(function () {
 });
 
 function generateQr() {
-    let apiURL = 'http://api.qrserver.com/v1/create-qr-code/';
+    let apiURL = 'https://api.qrserver.com/v1/create-qr-code/';
     let data = $('#inputUrl').val();
     let size = $('#sizeSelection').val();
-    console.log('SIZE: ' + size)
     let bgColor = colorDecoder($('#bgColorSelect').val());
     let codeColor = colorDecoder($('#codeColorSelect').val());
     let format = $('#formatSelect').val();
