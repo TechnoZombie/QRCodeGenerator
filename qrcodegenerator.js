@@ -89,7 +89,7 @@ async function downloadImage() {
     let url = window.URL.createObjectURL(blobImage);
     let a = document.createElement('a');
     a.href = url;
-    a.download = data + 'qr_code';
+    a.download = 'qr_code';
     document.body.appendChild(a);
     a.click();
     window.URL.revokeObjectURL(url);
