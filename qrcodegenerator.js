@@ -1,6 +1,5 @@
 $(document).ready(function () {
     const generateButton = $('#buttonGenerate');
-
     generateButton.click(function () {
         generateQr();
     });

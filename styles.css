@@ -1,6 +1,5 @@
 body {
     background-color: #3b3a3a; /* Dark gray */
-    color: #fff; /* White text */
     padding: 20px;
 }
 
@@ -22,6 +21,7 @@ body {
     background-color: #495057; /* Gray */
     padding: 20px;
     border-radius: 5px;
+    border: 1px solid #dee2e6;
 }
 
 #sliderStyling {
@@ -41,14 +41,6 @@ body {
     border-radius: 5px;
     background-color: #545454; /* Light gray */
     color: #212529; /* Dark gray */
-    /*    margin: 10px 0;
-        padding: 10px;
-        width: 100%;
-        border: none;
-        border-radius: 5px;
-        background-color: #dee2e6; /* Light gray */
-    /* color: #212529; /* Dark gray */
-
 }
 
 #inputGroup input[type="text"],
@@ -62,6 +54,7 @@ body {
     border-radius: 5px;
     background-color: #dee2e6; /* Light gray */
     color: #212529; /* Dark gray */
+
 }
 
 #buttonsGroup {
@@ -69,6 +62,7 @@ body {
     background-color: #495057; /* Gray */
     padding: 20px;
     border-radius: 5px;
+    border: 1px solid #dee2e6;
 }
 
 #buttonGenerate {

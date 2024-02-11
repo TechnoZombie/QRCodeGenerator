@@ -2,80 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR CODE GENERATOR</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="qrcodegenerator.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 
 </head>
 <body>
 
-<form>
 <div id="app">
 
-<div id="inputGroup">
+    <div id="inputGroup">
 
-    <input type="text" id="inputUrl" placeholder="URL or text">
-    <br>
-    <div id="sliderStyling">
-    <label id="labelSize" for="sizeSelection">QRCode Size</label>
-    <input type="range" placeholder="test" id="sizeSelection" min="100" max="500" value="250" class="slider">
+        <input type="text" id="inputUrl" placeholder="URL or text">
+        <br>
+        <div id="sliderStyling">
+            <label id="labelSize" for="sizeSelection">QRCode Size</label>
+            <input type="range" placeholder="test" id="sizeSelection" min="100" max="500" value="250" class="slider">
+        </div>
+
+
+        <select id="bgColorSelect">
+            <option disabled selected>Background Color</option>
+            <option>Black</option>
+            <option>Red</option>
+            <option>Green</option>
+            <option>Blue</option>
+            <option>OD Green</option>
+            <option>White</option>
+            <option>Matrix Green</option>
+        </select>
+        <br>
+        <select id="codeColorSelect">
+            <option disabled selected>Code Color</option>
+            <option>Black</option>
+            <option>Red</option>
+            <option>Green</option>
+            <option>Blue</option>
+            <option>OD Green</option>
+            <option>White</option>
+            <option>Matrix Green</option>
+        </select>
+        <br>
+        <select id="formatSelect">
+            <option disabled selected>Image Format</option>
+            <option>png</option>
+            <option>jpg</option>
+            <option>gif</option>
+            <option>svg</option>
+        </select>
     </div>
 
-
-    <select id="bgColorSelect">
-        <option disabled selected>Background Color</option>
-        <option>Black</option>
-        <option>Red</option>
-        <option>Green</option>
-        <option>Blue</option>
-        <option>OD Green</option>
-        <option>White</option>
-        <option>Matrix Green</option>
-    </select>
     <br>
-    <select id="codeColorSelect">
-        <option disabled selected>Code Color</option>
-        <option>Black</option>
-        <option>Red</option>
-        <option>Green</option>
-        <option>Blue</option>
-        <option>OD Green</option>
-        <option>White</option>
-        <option>Matrix Green</option>
-    </select>
-    <br>
-    <select id="formatSelect">
-        <option disabled selected>Image Format</option>
-        <option>png</option>
-        <option>jpg</option>
-        <option>gif</option>
-        <option>svg</option>
-    </select>
-</div>
 
-<br>
-
-<div id="buttonsGroup">
-    <button type="button" id="buttonGenerate">Generate</button>
-    <button type="reset" id="resetButton">Reset</button>
-    <div class="footer">
-        QRCodeGenerator v1.0
-        <br>
-                <span class="github-link">
+    <div id="buttonsGroup">
+        <button type="button" id="buttonGenerate">Generate</button>
+        <button type="reset" id="resetButton">Reset</button>
+        <div class="footer">
+            QRCodeGenerator v1.0
+            <br>
+            <span class="github-link">
         <a href="https://github.com/TechnoZombie/QRCodeGenerator" target="_blank" rel="noopener noreferrer">
             <img src="resources/github-logo.png" alt="GitHub Logo" class="github-logo">
             <span class="text">View project on GitHub</span>
         </a>
     </span>
+        </div>
     </div>
-</div>
 </div>
 <div class="generatedQRcode">
 </div>
 
-</form>
+
 </body>
 </html>
