@@ -1,4 +1,3 @@
-const apiThrowAway = 'http://api.qrserver.com/v1/create-qr-code/';
 $(document).ready(function () {
     const generateButton = $('#buttonGenerate');
 
@@ -26,31 +25,43 @@ $(document).ready(function () {
 });
 
 function generateQr() {
-    let qrCodeUrl = apiThrowAway;
+    let apiURL = 'http://api.qrserver.com/v1/create-qr-code/';
     let data = $('#inputUrl').val();
     let size = $('#sizeSelection').val();
+    console.log('SIZE: ' + size)
     let bgColor = colorDecoder($('#bgColorSelect').val());
     let codeColor = colorDecoder($('#codeColorSelect').val());
+    let format = $('#formatSelect').val();
 
-    qrCodeUrl += '?data=' + data;
-    qrCodeUrl += '&size=' + size;
-    qrCodeUrl += '&bgcolor=' + bgColor;
-    qrCodeUrl += '&color=' + codeColor;
-    qrCodeUrl += '&qzone=1';
-    qrCodeUrl += '&format=png';
+    let qrCodeUrl = apiURL +
+        '?data=' + data +
+        '&size=' + size + 'x' + size +
+        '&bgcolor=' + bgColor +
+        '&color=' + codeColor +
+        '&qzone=1' +
+        '&format=' + format;
 
-    injectQrCode(data, qrCodeUrl);
+    injectQrCode(data, qrCodeUrl).then(r => {
+    });
+
+
 }
 
-function injectQrCode(data, imgUrl) {
+async function injectQrCode(data, imgUrl) {
     if (data === "") {
         $('.generatedQRcode').append('URL is empty');
     } else {
         $('.generatedQRcode').empty();
-        $('.generatedQRcode').append('<img src=' + imgUrl + '>');
+        $('.generatedQRcode').append('<br><img src=' + imgUrl + '>');
+        await new Promise(resolve => {
+            $('.generatedQRcode img').on('load', function () {
+                resolve();
+            });
+        });
         $('.generatedQRcode').append('<br><button type="button" id="downloadButton">Download</button>');
     }
 }
+
 
 function colorDecoder(color) {
     switch (color) {
@@ -58,6 +69,16 @@ function colorDecoder(color) {
             return '0-0-0';
         case 'Matrix Green':
             return '0f0';
+        case 'Red':
+            return 'f00';
+        case 'Blue':
+            return '00f'
+        case 'OD Green':
+            return '556B2F'
+        case 'White':
+            return 'FFFFFF'
+        case 'Green':
+            return '00FF00'
     }
 }
 
@@ -68,7 +89,7 @@ async function downloadImage() {
     let url = window.URL.createObjectURL(blobImage);
     let a = document.createElement('a');
     a.href = url;
-    a.download = 'qr_code.png';
+    a.download = data + 'qr_code';
     document.body.appendChild(a);
     a.click();
     window.URL.revokeObjectURL(url);
