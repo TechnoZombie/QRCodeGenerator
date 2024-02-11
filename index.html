@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>QR CODE GENERATOR</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="qrcodegenerator.js"></script>
 </head>
 <body>
 <div class="input-group">
+    <input type="text" id="inputUrl" placeholder="URL">
+    <select class="custom-select" id="sizeSelection">
+        <option disabled selected>Default Size</option>
+        <option>150x150</option>
+        <option>200x200</option>
+        <option>400x400</option>
+    </select>
+
     <button type="button" id="buttonGenerate">GENERATE</button>
+    <button type="reset" id="resetButton">RESET</button>
+</div>
+<div class="generatedQRcode">
+<!--
+<img src="http://api.qrserver.com/v1/create-qr-code/?data=google.com&size=150x150&color=0f0&bgcolor=0-0-0&qzone=1&format=png">
+--!>
 </div>
 </body>
 </html>

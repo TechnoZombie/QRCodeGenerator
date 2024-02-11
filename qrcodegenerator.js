@@ -1,38 +1,43 @@
-let URL = 'http://api.qrserver.com/v1/create-qr-code/?data=google.com&size=150x150&color=0f0&bgcolor=0-0-0&qzone=1&format=png'
-let API_URL = URL;
+const apiThrowAway = 'http://api.qrserver.com/v1/create-qr-code/,' +
+    '?data=google.com,' +
+    '&size=150x150,' +
+    '&color=0f0,' +
+    '&bgcolor=0-0-0,' +
+    '&qzone=1,' +
+    '&format=png';
 
 $(document).ready(function () {
-    const convertButton = $('#buttonGenerate');
+    const generateButton = $('#buttonGenerate');
 
-
-    convertButton.click(function () {
+    generateButton.click(function () {
         generateQR();
     });
 
-function generateQR(callBackFunction) {
-    fetchData(function (error, result)
-    {
-        if (error) {
-            console.error('Error generating code: ', error)
-
-        } else {
-            callBackFunction(result);
-        }
+    const resetButton = $('#resetButton');
+    resetButton.click(function () {
+        $("#inputUrl").val('');
+        $("#sizeSelection").val('Default Size');
     });
+
+
+
+});
+
+function generateQR() {
+    let qrCodeUrl = 'http://api.qrserver.com/v1/create-qr-code/'
+    let data = $('#inputUrl').val();
+    let size = $('#sizeSelection').val();
+    let color;
+    console.log(size)
+    qrCodeUrl += '?data=' + data;
+    qrCodeUrl += '&size=' + size;
+    console.log(qrCodeUrl);
+    injectQrCode(qrCodeUrl);
+
 }
 
-
-function fetchData(cb) {
-    $.ajax({
-        url: API_URL,
-        type: 'GET',
-        dataType: 'json',
-        async: true,
-        success: function (results) {
-            cb(null, results);
-        },
-        error: function (request, statusText, httpError) {
-            cb(httpError || statusText);
-        }
-    });
+function injectQrCode(imgUrl) {
+    $('.generatedQRcode').empty();
+    $('.generatedQRcode').append('<img src=' + imgUrl + '>');
 }
+
