@@ -1,13 +1,153 @@
-body{
-    background-color: #494949;
+body {
+    background-color: #343a40; /* Dark gray */
+    color: #fff; /* White text */
 }
 
-#app{
+#labelSize {
+    margin-left: 10px;
+}
+
+#app {
+    max-width: 400px;
+    margin: 0 auto;
+    width: 80%; /* Adjusted width */
+    padding: 20px;
+}
+
+#inputGroup {
+    background-color: #495057; /* Gray */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#sliderStyling {
+    background-color: #dee2e6;
+    color: #212529; /* Dark gray */
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0px;
+
+}
+
+#sizeSelection {
+
+    padding: 5px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #545454; /* Light gray */
+    color: #212529; /* Dark gray */
+    /*    margin: 10px 0;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        background-color: #dee2e6; /* Light gray */
+    /* color: #212529; /* Dark gray */
+
+}
+
+#inputGroup input[type="text"],
+#bgColorSelect,
+#codeColorSelect,
+#formatSelect {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #dee2e6; /* Light gray */
+    color: #212529; /* Dark gray */
+}
+
+#buttonsGroup {
+    text-align: center;
+    background-color: #495057; /* Gray */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#buttonGenerate {
+    margin-top: 0px;
+    padding: 10px;
     border-radius: 10px;
-    background-color: #04AA6D;
+    border: 2px solid #0056b3;
+    background-color: #007bff; /* Blue */
+    color: #fff; /* White text */
+    cursor: pointer;
+    font-weight: bold;
+
 }
 
+#resetButton {
+    margin-top: 0px;
+    padding: 10px;
+    background-color: darkorange;
+    color: #fff;
+    border: 2px solid #c58100;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
 
+#downloadButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue */
+    color: #fff; /* White text */
+    cursor: pointer;
+
+}
+
+#downloadButton:hover {
+    background-color: #0056b3;
+}
+
+#buttonGenerate:hover {
+    background-color: #0056b3;
+}
+
+#resetButton:hover {
+    background-color: #c58100;
+}
+
+.generatedQRcode {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer {
+    width: 100%;
+    padding: 10px 0;
+    font-weight: bolder;
+    color: black;
+    font-size: 11px;
+}
+
+.github-link {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.github-logo {
+    height: 2em;
+    vertical-align: middle;
+}
+
+.text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+}
 
 .slider {
     -webkit-appearance: none;
@@ -27,8 +167,8 @@ body{
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     background: #0353e7;
     cursor: pointer;

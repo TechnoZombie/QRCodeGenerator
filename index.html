@@ -12,12 +12,15 @@
 <body>
 <div id="app">
 <div id="inputGroup">
-    <input type="text" id="inputUrl" placeholder="URL">
-    <br>
-    Size
-    <input type="range" id="sizeSelection" min="100" max="500" value="250" class="slider">
 
+    <input type="text" id="inputUrl" placeholder="URL or text">
     <br>
+    <div id="sliderStyling">
+    <label id="labelSize" for="sizeSelection">QRCode Size</label>
+    <input type="range" placeholder="test" id="sizeSelection" min="100" max="500" value="250" class="slider">
+    </div>
+
+
     <select id="bgColorSelect">
         <option disabled selected>Background Color</option>
         <option>Black</option>
@@ -52,8 +55,18 @@
 <br>
 
 <div id="buttonsGroup">
-    <button type="button" id="buttonGenerate">GENERATE</button>
-    <button type="reset" id="resetButton">RESET</button>
+    <button type="button" id="buttonGenerate">Generate</button>
+    <button type="reset" id="resetButton">Reset</button>
+    <div class="footer">
+        QRCodeGenerator v1.0
+        <br>
+                <span class="github-link">
+        <a href="https://github.com/TechnoZombie/QRCodeGenerator" target="_blank" rel="noopener noreferrer">
+            <img src="resources/github-logo.png" alt="GitHub Logo" class="github-logo">
+            <span class="text">View project on GitHub</span>
+        </a>
+    </span>
+    </div>
 </div>
 </div>
 <div class="generatedQRcode">
