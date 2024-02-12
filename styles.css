@@ -4,7 +4,7 @@ body {
 }
 
 #labelSize {
-    margin-left: 10px;
+    margin-left: 0px;   
 }
 
 #app {
@@ -30,12 +30,12 @@ body {
     border: none;
     border-radius: 5px;
     margin: 10px 0px;
-
+    padding: 5px;
+    width: 100%;
 }
 
 #sizeSelection {
 
-    padding: 5px;
     width: 100%;
     border: none;
     border-radius: 5px;
@@ -156,6 +156,8 @@ a:hover {
     opacity: 0.9;
     -webkit-transition: .2s;
     transition: opacity .2s;
+    max-width: 65%;
+    vertical-align: middle;
 }
 
 .slider:hover {
