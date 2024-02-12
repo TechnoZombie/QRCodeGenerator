@@ -23,19 +23,18 @@ body {
     border-radius: 5px;
     border: 1px solid #dee2e6;
 }
-
 #sliderStyling {
     background-color: #dee2e6;
     color: #212529; /* Dark gray */
     border: none;
     border-radius: 5px;
     margin: 10px 0px;
-    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    padding-left: 10px;
     width: 100%;
 }
-
 #sizeSelection {
-
     width: 100%;
     border: none;
     border-radius: 5px;
@@ -167,17 +166,17 @@ a:hover {
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
+    width: 15px;
+    height: 35px;
+    border-radius: 10%;
     background: #0353e7;
     cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
+    width: 15px;
+    height: 35px;
+    border-radius: 10%;
     background: #0353e7;
     cursor: pointer;
 }

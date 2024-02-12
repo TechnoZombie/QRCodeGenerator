@@ -75,6 +75,10 @@ function colorDecoder(color) {
             return 'FFFFFF'
         case 'Green':
             return '007500'
+        case 'Orange':
+            return 'FF9200'
+        case 'Gray':
+            return '495057'
     }
 }
 

@@ -3,8 +3,10 @@ const colorOptions = [
     "Red",
     "Green",
     "Blue",
-    "OD Green",
     "White",
+    "Gray",
+    "Orange",
+    "OD Green",
     "Matrix Green"
 ]
 
