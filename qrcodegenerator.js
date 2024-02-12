@@ -21,7 +21,6 @@ $(document).ready(function () {
         generateFormatSelect()
         $('.generatedQRcode').empty();
     }
-
 });
 
 function generateQr() {
@@ -41,11 +40,8 @@ function generateQr() {
         '&qzone=1' +
         '&format=' + format;
 
-    // const qrCodeUrl = `${apiURL}?data=${data}&size=${size}x${size}&bgcolor=${bgColor}&color=${codeColor}&qzone=1&format=${format}`;
-
     injectQrCode(data, qrCodeUrl).then(r => {
     });
-
 }
 
 async function injectQrCode(data, imgUrl) {
@@ -63,13 +59,12 @@ async function injectQrCode(data, imgUrl) {
     }
 }
 
-
 function colorDecoder(color) {
     switch (color) {
         case 'Black':
             return '0-0-0';
         case 'Matrix Green':
-            return '0f0';
+            return '00FF00';
         case 'Red':
             return 'f00';
         case 'Blue':
@@ -79,7 +74,7 @@ function colorDecoder(color) {
         case 'White':
             return 'FFFFFF'
         case 'Green':
-            return '00FF00'
+            return '007500'
     }
 }
 
