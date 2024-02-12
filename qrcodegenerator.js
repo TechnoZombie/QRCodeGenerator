@@ -16,9 +16,9 @@ $(document).ready(function () {
     function clearFields() {
         $("#inputUrl").val('');
         $("#sizeSelection").val('Default Size');
-        $("#bgColorSelect").val('Background Color');
-        $("#codeColorSelect").val('Code Color');
-        $("#formatSelect").val('Image Format');
+        generateBgColorSelect();
+        generateCodeColorSelect();
+        generateFormatSelect()
         $('.generatedQRcode').empty();
     }
 
