@@ -25,14 +25,15 @@ $(document).ready(function () {
 });
 
 function generateQr() {
-    let apiURL = 'https://api.qrserver.com/v1/create-qr-code/';
-    let data = $('#inputUrl').val();
-    let size = $('#sizeSelection').val();
-    let bgColor = colorDecoder($('#bgColorSelect').val());
-    let codeColor = colorDecoder($('#codeColorSelect').val());
-    let format = $('#formatSelect').val();
+    const apiURL = 'https://api.qrserver.com/v1/create-qr-code/';
+    const tempData = $('#inputUrl').val();
+    const data = encodeURIComponent(tempData);
+    const size = $('#sizeSelection').val();
+    const bgColor = colorDecoder($('#bgColorSelect').val());
+    const codeColor = colorDecoder($('#codeColorSelect').val());
+    const format = $('#formatSelect').val();
 
-    let qrCodeUrl = apiURL +
+    const qrCodeUrl = apiURL +
         '?data=' + data +
         '&size=' + size + 'x' + size +
         '&bgcolor=' + bgColor +
@@ -40,9 +41,10 @@ function generateQr() {
         '&qzone=1' +
         '&format=' + format;
 
+    // const qrCodeUrl = `${apiURL}?data=${data}&size=${size}x${size}&bgcolor=${bgColor}&color=${codeColor}&qzone=1&format=${format}`;
+
     injectQrCode(data, qrCodeUrl).then(r => {
     });
-
 
 }
 
